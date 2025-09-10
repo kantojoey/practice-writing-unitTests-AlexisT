@@ -1,12 +1,24 @@
 // 1. addItem(cart, item, quantity): Adds an item to the cart.
 function addItem(cart, item, quantity){
-    for(let i = 1; i <= quantity; i++){
-        cart.push(item);
+    try{
+        if(Number(quantity) > 0){
+            for(let i = 1; i <= quantity; i++){
+                cart.push(item);
+            }
+        } else{
+            throw new Error("Quantity must be greater than 0.");
+        }
+    }catch(err){
+        console.log("Error:", err.message);
+    }finally{
+        return cart;
     }
-    return cart;
 };
+// let myCart = [];
+// addItem(myCart, "bananas", 2);
+// console.log(myCart);
+// console.log(addItem(myCart, "bread", -1));
 
-console.log(addItem([], "bread", -2));
 // 2. removeItem(cart, item): Removes an item from the cart.
 function removeItem(cart, item){
     let index = cart.indexOf(item);
