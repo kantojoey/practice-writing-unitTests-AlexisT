@@ -1,14 +1,5 @@
 const cart = require('../cart.js');
-// 2. Write Unit Tests:
-// ○ Create a tests folder and add a file named cart.test.js.
-// ○ Write tests for each method in the cart.js module, covering:
-//SYNTAX:
-// describe("hello", function() {
 
-//    test("should return a custom message when name is specified",
-// function() {
-//        expect(hello("Jest")).toBe("Hello, Jest!");
-//    });
 // 1. addItem
 // ○ Positive: Add a new item with a valid name and quantity.
 // ○ Negative: Add an item with a negative quantity.
@@ -62,6 +53,3 @@ describe("getTotalItems", function(){
         expect(cart.getTotalItems(["a","a","a","a","a","a","a","a","a","a","a","a","a","a","a","a","a","a","a","a","a","a","a","a","a","a","a","a","a","a","a","a","a","a"])).toBe(34);
     });
 });
-
-// 3. Run the Tests:
-// ○ Use npm test to execute the tests and verify that all pass.
